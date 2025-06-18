@@ -1,0 +1,122 @@
+<!DOCTYPE html><html lang="en"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><meta name="generator" content="Astro v5.9.2"><meta name="description" content="Leave a message in my guestbook"><meta name="author" content="QuisprSh"><title>Guestbook - QuisprSh</title><!-- Open Graph --><meta property="og:title" content="Guestbook - QuisprSh"><meta property="og:description" content="Leave a message in my guestbook"><meta property="og:type" content="website"><meta property="og:url" content="https://example.org"><!-- Twitter --><meta name="twitter:card" content="summary"><meta name="twitter:title" content="Guestbook - QuisprSh"><meta name="twitter:description" content="Leave a message in my guestbook"><!-- Fonts --><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet"><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/_astro/ClientRouter.astro_astro_type_script_index_0_lang.CtSceO8m.js"></script><link rel="stylesheet" href="/_astro/guestbook.CbMwx_Rq.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media (prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}.astro-route-announcer{position:absolute;left:0;top:0;clip:rect(0 0 0 0);clip-path:inset(50%);overflow:hidden;white-space:nowrap;width:1px;height:1px}html{scroll-behavior:smooth}body{overflow-x:hidden}@keyframes fadeIn{0%{opacity:0;transform:translateY(10px)}to{opacity:1;transform:translateY(0)}}@keyframes fadeOut{0%{opacity:1;transform:translateY(0)}to{opacity:0;transform:translateY(-10px)}}[data-astro-transition=fade],[data-astro-transition-scope=morph]{animation:fadeIn .3s ease-out}.animate-fade-in{animation:fadeIn .6s ease-out}.animate-fade-in-delay{animation:fadeIn .8s ease-out .2s both}a,button{transition:all .2s ease-in-out}html.astro-transitioning{cursor:wait}html.astro-transitioning *{pointer-events:none}
+</style><style>[data-astro-transition-scope="astro-m542s2jb-1"] { view-transition-name: astro-m542s2jb-1; }@layer astro { ::view-transition-old(astro-m542s2jb-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(astro-m542s2jb-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-m542s2jb-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-m542s2jb-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-m542s2jb-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-m542s2jb-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-m542s2jb-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-m542s2jb-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-m542s2jb-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-m542s2jb-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-m542s2jb-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-m542s2jb-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="bg-base text-text font-sans antialiased"> <nav class="fixed top-0 left-0 right-0 z-50 bg-base/80 backdrop-blur-md border-b border-surface0" data-astro-transition-persist="astro-jicqxufy-2"> <div class="max-w-4xl mx-auto px-6 py-4"> <div class="flex items-center justify-between"> <a href="/" class="text-xl font-bold text-lavender hover:text-blue transition-colors">
+QuisprSh
+</a> <div class="flex space-x-6"> <a href="/" class="text-sm font-medium transition-colors hover:text-lavender text-subtext1"> Home </a><a href="/vrc-pictures" class="text-sm font-medium transition-colors hover:text-lavender text-subtext1"> VRChat </a><a href="/links" class="text-sm font-medium transition-colors hover:text-lavender text-subtext1"> Links </a><a href="/guestbook" class="text-sm font-medium transition-colors hover:text-lavender text-lavender"> Guestbook </a> </div> </div> </div> </nav> <main class="min-h-screen pt-20" data-astro-transition-scope="astro-m542s2jb-1">  <div class="max-w-4xl mx-auto px-6 py-12"> <div class="text-center mb-12 animate-fade-in"> <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-lavender to-mauve bg-clip-text text-transparent">
+Guestbook
+</h1> <p class="text-lg text-subtext0 max-w-2xl mx-auto">
+Thanks for stopping by! I'd love to hear what you think or just say hello.
+</p> </div> <div class="max-w-2xl mx-auto animate-fade-in-delay"> <div class="bg-surface0/50 rounded-2xl p-8 border border-surface1"> <h2 class="text-2xl font-bold mb-6 text-lavender">Sign the Guestbook</h2> <p class="text-subtext0 mb-8"> Leave a note in my guestbook! I love hearing from visitors. </p> <form id="guestbook-form" class="space-y-6"> <div> <label for="name" class="block text-sm font-medium text-subtext1 mb-2">
+Your Name
+</label> <input type="text" id="name" name="name" required class="w-full px-4 py-3 bg-surface1 border border-surface2 rounded-lg text-text placeholder-subtext0 focus:outline-none focus:ring-2 focus:ring-lavender focus:border-transparent transition-colors" placeholder="Enter your name"> </div> <div> <label for="message" class="block text-sm font-medium text-subtext1 mb-2">
+Message
+</label> <textarea id="message" name="message" required rows="4" class="w-full px-4 py-3 bg-surface1 border border-surface2 rounded-lg text-text placeholder-subtext0 focus:outline-none focus:ring-2 focus:ring-lavender focus:border-transparent transition-colors resize-none" placeholder="Leave a nice message..."></textarea> </div> <button type="submit" class="w-full bg-lavender text-base font-medium py-3 px-6 rounded-lg hover:bg-blue transition-colors focus:outline-none focus:ring-2 focus:ring-lavender focus:ring-offset-2 focus:ring-offset-base disabled:opacity-50 disabled:cursor-not-allowed"> <span class="submit-text">Send Message</span> <span class="loading-text hidden">Sending...</span> </button> </form> <div id="success-message" class="hidden mt-6 p-4 bg-green/20 border border-green/30 rounded-lg"> <p class="text-green font-medium"> Thanks for signing my guestbook! Your message has been sent. </p> </div> <div id="error-message" class="hidden mt-6 p-4 bg-red/20 border border-red/30 rounded-lg"> <p class="text-red font-medium">
+Something went wrong. Please try again later.
+</p> </div> </div> <script>(function(){const webhookUrl = "https://guestbook-worker.mochigub.workers.dev";
+
+  const form = document.getElementById('guestbook-form');
+  const submitButton = form.querySelector('button[type="submit"]');
+  const submitText = submitButton.querySelector('.submit-text');
+  const loadingText = submitButton.querySelector('.loading-text');
+  const successMessage = document.getElementById('success-message');
+  const errorMessage = document.getElementById('error-message');
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    
+    // Hide previous messages
+    successMessage.classList.add('hidden');
+    errorMessage.classList.add('hidden');
+    
+    // Show loading state
+    submitButton.disabled = true;
+    submitText.classList.add('hidden');
+    loadingText.classList.remove('hidden');
+    
+    const formData = new FormData(form);
+    const name = formData.get('name');
+    const message = formData.get('message');
+    
+    try {
+      const response = await fetch(webhookUrl, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          embeds: [{
+            title: 'New Guestbook Entry',
+            color: 0xb4befe, // Lavender color in hex
+            fields: [
+              {
+                name: 'Name',
+                value: name,
+                inline: true
+              },
+              {
+                name: 'Message',
+                value: message,
+                inline: false
+              }
+            ],
+            timestamp: new Date().toISOString()
+          }]
+        })
+      });
+      
+      if (response.ok) {
+        successMessage.classList.remove('hidden');
+        form.reset();
+      } else {
+        throw new Error('Failed to send message');
+      }
+    } catch (error) {
+      console.error('Error sending message:', error);
+      errorMessage.classList.remove('hidden');
+    } finally {
+      // Reset button state
+      submitButton.disabled = false;
+      submitText.classList.remove('hidden');
+      loadingText.classList.add('hidden');
+    }
+  });
+})();</script> </div> <!-- Fun fact section --> <div class="max-w-2xl mx-auto mt-16 animate-fade-in-delay"> <div class="bg-gradient-to-r from-mauve/10 to-pink/10 rounded-2xl p-8 border border-mauve/20 text-center"> <h3 class="text-xl font-semibold text-mauve mb-3">✨ Fun Fact</h3> <p class="text-subtext0">
+This guestbook is powered by Discord webhooks! Your message gets formatted 
+          as a beautiful embed and sent straight to my personal Discord server.
+</p> </div> </div> </div>  </main> <footer class="border-t border-surface0 bg-mantle"> <div class="max-w-4xl mx-auto px-6 py-8"> <div class="text-center text-subtext0 text-sm"> ♡2025 by QuisprSh. Copying is an act of love. Please copy. </div> </div> </footer> </body></html>
