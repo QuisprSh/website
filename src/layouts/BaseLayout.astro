@@ -1,0 +1,169 @@
+---
+export interface Props {
+  title: string;
+  description: string;
+  currentPath?: string;
+}
+
+const { title, description, currentPath = '/' } = Astro.props;
+const fullTitle = title === 'QuisprSh' ? title : `${title} - QuisprSh`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="author" content="QuisprSh" />
+    <title>{fullTitle}</title>
+
+    <!-- Open Graph -->
+    <meta property="og:title" content={fullTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://example.org" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content={fullTitle} />
+    <meta name="twitter:description" content={description} />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <ViewTransitions />
+  </head>
+  <body class="bg-base text-text font-sans antialiased">
+    <nav
+      class="fixed top-0 left-0 right-0 z-50 bg-base/80 backdrop-blur-md border-b border-surface0"
+      transition:persist="nav"
+    >
+      <div class="max-w-4xl mx-auto px-6 py-4">
+        <div class="flex items-center justify-between">
+          <a
+            href="/"
+            class="text-xl font-bold text-lavender hover:text-blue transition-colors"
+          >
+            QuisprSh
+          </a>
+          <div class="flex space-x-6">
+            <a
+              href="/"
+              class={`text-sm font-medium transition-colors hover:text-lavender ${
+                currentPath === '/' ? 'text-lavender' : 'text-subtext1'
+              }`}
+            >
+              Home
+            </a>
+            <a
+              href="/vrc-pictures"
+              class={`text-sm font-medium transition-colors hover:text-lavender ${
+                currentPath === '/vrc-pictures' ? 'text-lavender' : 'text-subtext1'
+              }`}
+            >
+              VRChat
+            </a>
+            <a
+              href="/links"
+              class={`text-sm font-medium transition-colors hover:text-lavender ${
+                currentPath === '/links' ? 'text-lavender' : 'text-subtext1'
+              }`}
+            >
+              Links
+            </a>
+            <a
+              href="/guestbook"
+              class={`text-sm font-medium transition-colors hover:text-lavender ${
+                currentPath === '/guestbook' ? 'text-lavender' : 'text-subtext1'
+              }`}
+            >
+              Guestbook
+            </a>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <main class="min-h-screen pt-20">
+      <slot />
+    </main>
+
+    <footer class="border-t border-surface0 bg-mantle">
+      <div class="max-w-4xl mx-auto px-6 py-8">
+        <div class="text-center text-subtext0 text-sm">
+          ♡2025 by QuisprSh. Copying is an act of love. Please copy.
+        </div>
+      </div>
+    </footer>
+
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+      
+      body {
+        overflow-x: hidden;
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+          transform: translateY(10px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      @keyframes fadeOut {
+        0% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        100% {
+          opacity: 0;
+          transform: translateY(-10px);
+        }
+      }
+
+      [data-astro-transition="fade"],
+      [data-astro-transition-scope="morph"] {
+        animation: fadeIn 0.3s ease-out;
+      }
+
+      .animate-fade-in {
+        animation: fadeIn 0.6s ease-out;
+      }
+
+      .animate-fade-in-delay {
+        animation: fadeIn 0.8s ease-out 0.2s both;
+      }
+
+      a,
+      button {
+        transition: all 0.2s ease-in-out;
+      }
+
+      html.astro-transitioning {
+        cursor: wait;
+      }
+
+      html.astro-transitioning * {
+        pointer-events: none;
+      }
+    </style>
+  </body>
+</html>
+
+<script>
+  import { ViewTransitions } from 'astro:transitions/client';
+</script>

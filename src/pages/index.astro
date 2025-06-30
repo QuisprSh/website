@@ -1,0 +1,39 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout
+  title="QuisprSh"
+  description="Personal website of QuisprSh"
+  currentPath="/"
+>
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <!-- Hero Section -->
+    <section class="text-center py-16 animate-fade-in">
+      <div class="mb-8">
+        <div class="w-32 h-32 mx-auto mb-6 bg-gradient-to-br from-lavender to-mauve rounded-full flex items-center justify-center text-4xl font-bold text-base">
+          <img src="/pfp.png" class="rounded-full" alt="QuisprSh Profile Picture" />
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold mb-4 bg-gradient-to-r from-lavender to-mauve bg-clip-text text-transparent">
+          QuisprSh
+        </h1>
+        <p class="text-xl text-subtext1 mb-6">
+          A random person on the interwebs.
+        </p>
+        <p class="text-lg text-subtext0 max-w-2xl mx-auto leading-relaxed">
+          Hello! o/ I'm Quispr, you may call me Quisp. Welcome to my website!
+        </p>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 animate-fade-in-delay">
+      <div class="bg-surface0/50 rounded-2xl p-8 backdrop-blur-sm border border-surface1">
+        <h2 class="text-2xl font-bold mb-6 text-lavender">About Me</h2>
+        <p class="text-lg text-subtext0 leading-relaxed">
+          I'm just a random person on the interwebs. Most of my free time is spent watching youtubers like Failboat, Kitboga, DougDoug, Neuro-sama, CHRBRG, SomeOrdinaryGames, and so on. Though I also play games like VRChat. Minecraft, Roblox, etc. I use GNU/Linux (specificly Arch Linux) as my operating system of choice. Also, I use my system entirely from a Steam Deck. :3
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

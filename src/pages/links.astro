@@ -1,0 +1,100 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const links = [
+  {
+    name: 'Youtube',
+    url: 'https://www.youtube.com/@QuisprSh',
+    emoji: '🔴',
+    description: 'https://www.youtube.com/@QuisprSh'
+  },
+  {
+    name: 'Roblox',
+    url: 'https://www.roblox.com/users/131892837',
+    emoji: '🧍',
+    description: 'https://www.roblox.com/users/131892837'
+  },
+  {
+    name: 'NameMC',
+    url: 'https://namemc.com/profile/QuisprSh.1',
+    emoji: '🧱',
+    description: 'https://namemc.com/profile/QuisprSh.1'
+  },
+  {
+    name: 'GitHub',
+    url: 'https://github.com/QuisprSh',
+    emoji: '🐙',
+    description: 'https://github.com/QuisprSh'
+  },
+  {
+    name: 'Steam',
+    url: 'https://steamcommunity.com/id/QuisprSh',
+    emoji: '🎮',
+    description: 'https://steamcommunity.com/id/QuisprSh'
+  },
+  {
+    name: 'VRChat',
+    url: 'https://vrchat.com/home/user/usr_2f476a3d-f092-4760-90a0-2dcdc88ad781',
+    emoji: '🗨️',
+    description: 'https://vrchat.com/home/user/usr_2f476a3d-f092-4760-90a0-2dcdc88ad781'
+  },
+  {
+    name: 'Bluesky',
+    url: 'https://bsky.app/profile/quisprsh.blahaj.land',
+    emoji: '🌤️',
+    description: 'https://bsky.app/profile/quisprsh.blahaj.land'
+  },
+  {
+    name: 'Email',
+    url: 'mailto:quisprsh@blahaj.land',
+    emoji: '📨',
+    description: 'quisprsh@blahaj.land'
+  }
+];
+---
+
+<BaseLayout
+  title="Links"
+  description="Find me around the web"
+  currentPath="/links"
+>
+  <div class="max-w-4xl mx-auto px-6 py-12">
+    <div class="text-center mb-12 animate-fade-in">
+      <h1 class="text-4xl font-bold mb-4 bg-gradient-to-r from-lavender to-mauve bg-clip-text text-transparent">
+        Find Me Online
+      </h1>
+      <p class="text-lg text-subtext0">
+        Connect with me across different platforms
+      </p>
+    </div>
+
+    <div class="max-w-2xl mx-auto space-y-4 animate-fade-in-delay">
+      {links.map((link, index) => (
+        <a
+          href={link.url}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block bg-surface0/50 hover:bg-surface1/50 rounded-2xl p-6 transition-all duration-300 hover:scale-102 border border-surface1 hover:border-lavender/30 group"
+          style={`animation-delay: ${index * 0.1}s`}
+        >
+          <div class="flex items-center space-x-4">
+            <div class="flex-shrink-0 text-3xl">
+              {link.emoji}
+            </div>
+            <div class="flex-1">
+              <h3 class="text-xl font-semibold text-lavender group-hover:text-blue transition-colors">
+                {link.name}
+              </h3>
+              <p class="text-subtext0 mt-1">
+                {link.description}
+              </p>
+            </div>
+            <div class="flex-shrink-0 text-subtext1 group-hover:text-lavender transition-colors">
+              →
+            </div>
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</BaseLayout>
