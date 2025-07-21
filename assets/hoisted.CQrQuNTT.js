@@ -1,0 +1,1 @@
+import"./OfflineLinkDetection.astro_astro_type_script_index_0_lang.DHp0z_9o.js";document.addEventListener("DOMContentLoaded",()=>{const t=document.getElementById("main-content");t&&setTimeout(()=>{t.classList.add("loaded")},300)});
